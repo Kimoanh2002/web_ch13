@@ -1,0 +1,61 @@
+/* The styles for the elements */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 85%;
+    margin-left: 2em;
+    margin-right: 2em;
+    width: 400px;
+    background-color: #FCF8E8; /* Vàng kem làm nền chính */
+}
+h1 {
+    font-size: 140%;
+    color: #F8E39E; /* Vàng dứa cho tiêu đề chính */
+    margin-bottom: .5em;
+}
+h2 {
+    font-size: 120%;
+    color: #F8E39E; /* Vàng dứa cho tiêu đề phụ */
+    margin-bottom: .5em;
+}
+label {
+    float: left;
+    width: 7em;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+    color: #B7D989; /* Xanh lá dứa cho nhãn */
+}
+input[type="text"], input[type="email"] {  /* An attribute selector */
+    width: 15em;
+    margin-left: 0.5em;
+    margin-bottom: 0.5em;
+    border: 1px solid #D0E6C7; /* Xanh lá bạc hà cho viền input */
+}
+input[type="submit"] {
+    background-color: #F8E39E; /* Vàng dứa cho nút bấm */
+    color: #333; /* Màu chữ tối để dễ đọc */
+    border: none;
+    padding: 0.5em 1em;
+    cursor: pointer;
+}
+input[type="submit"]:hover {
+    background-color: #B7D989; /* Chuyển sang xanh lá dứa khi hover */
+}
+span {
+    margin-left: 0.5em;
+    margin-bottom: 0.5em;
+    color: #D0E6C7; /* Xanh lá bạc hà cho giá trị hiển thị */
+}
+br {
+    clear: both;
+}
+.error-message {
+    color: #F3C7B2; /* Hồng dứa cho thông báo lỗi */
+}
+
+/* The styles for the classes */
+.pad_top {
+    padding-top: 0.25em;
+}
+.margin_left {
+    margin-left: 0.5em;
+}
