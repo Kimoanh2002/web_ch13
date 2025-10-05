@@ -1,28 +1,33 @@
-<!DOCTYPE html>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <meta charset="utf-8">
-    <title>Murach's Java Servlets and JSP</title>
-    <link rel="stylesheet" href="styles/main.css" type="text/css"/>
+    <title>Email Subscription</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
+<div class="container">
     <h1>Join our email list</h1>
-    <p>To join our email list, enter your name and
-       email address below.</p>
-    <p><i>${message}</i></p>
-    <form action="emailList" method="post">
+    <p>To join our email list, enter your name and email address below.</p>
+    <% if (request.getAttribute("message") != null) { %>
+    <p class="error-message"><%= request.getAttribute("message") %></p>
+    <% } %>
+    <form action="/email/join" method="post" class="subscription-form">
         <input type="hidden" name="action" value="add">
-        <label class="pad_top">Email:</label>
-        <input type="email" name="email" value="${user.email}"
-               required><br>
-        <label class="pad_top">First Name:</label>
-        <input type="text" name="firstName" value="${user.firstName}"
-               required><br>
-        <label class="pad_top">Last Name:</label>
-        <input type="text" name="lastName" value="${user.lastName}"
-               required><br>
-        <label>&nbsp;</label>
-        <input type="submit" value="Join Now" class="margin_left">
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" required>
+        </div>
+        <div class="form-group">
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" required>
+        </div>
+        <button type="submit" class="submit-btn">Join Now</button>
     </form>
+</div>
 </body>
 </html>
